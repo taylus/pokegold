@@ -1,3 +1,4 @@
 wsl make silver
-::bgb pokesilver.gbc
-bgb pokesilver.sna
+
+:: start bgb w/ the debugger closed (so it's immediately playable)
+bgb -nowarn -setting startdebug=0 -setting debugscreen=0 pokesilver.sna
