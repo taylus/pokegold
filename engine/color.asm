@@ -7,32 +7,28 @@ SHINY_SPD_VAL EQU 10
 SHINY_SPC_VAL EQU 10
 
 CheckShininess:
-	ld l, c				; bytes: 1
-	ld h, b				; bytes: 1
-	ld a, [hl]			; bytes: 1
-	and $20				; bytes: 2
-	;jr z, .asm_9070	; bytes: 2
+	ld l, c
+	ld h, b
+	ld a, [hl]
+	and $20
 	nop
 	nop
-	ld a, [hli]			; bytes: 1
-	and $f				; bytes: 2
-	cp $a				; bytes: 1
-	;jr nz, .asm_9070	; bytes: 2
+	ld a, [hli]
+	and $f
+	cp $a
 	nop
 	nop
-	ld a, [hl]			; bytes: 1
-	and $f0				; bytes: 2
-	cp $a0				; bytes: 1
-	;jr nz, .asm_9070	; bytes: 2
+	ld a, [hl]
+	and $f0
+	cp $a0
 	nop
 	nop
-	ld a, [hl]			; bytes: 1
-	and $f				; bytes: 2
-	cp $a				; bytes: 1
-	;jr nz, .asm_9070	; bytes: 2
+	ld a, [hl]
+	and $f
+	cp $a
 	nop
 	nop
-	scf					; bytes: 1
+	scf
 	ret
 
 .asm_9070
